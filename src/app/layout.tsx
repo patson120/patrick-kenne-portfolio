@@ -1,12 +1,12 @@
 
 
 import localFont from "next/font/local"
-import "@/styles/globals.css"
+import "../styles/globals.css"
 import { FC } from "react"
 import { getLocale, getMessages } from "next-intl/server"
 import { NextIntlClientProvider } from "next-intl"
-import NavigationBar from "@/components/NavigationBar"
-import Footer from "@/components/Footer"
+import NavigationBar from "../components/NavigationBar"
+import Footer from "../components/Footer"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
