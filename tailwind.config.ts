@@ -11,6 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primary: '#3498db',
+        secondary: '#2c3e50',
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        roboto: ['Roboto'],
+        heading: ['Montserrat', 'sans-serif'],
       },
     },
   },
