@@ -1,1 +1,5 @@
-export const languages = ['en', 'fr']
+const languages: string[] = ['en', 'fr']
+
+export default {
+    languages
+}
