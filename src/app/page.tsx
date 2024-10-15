@@ -1,5 +1,4 @@
 import BodyContent from "@/components/BodyContent";
-import Image from "next/image";
 
 export default function Home() {
   return (
