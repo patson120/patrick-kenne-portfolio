@@ -7,7 +7,7 @@ const NavigationBar = () => {
   const [showMenu, setshowMenu] = useState('')
 
   const handleOpenMenu = () => {
-    document.getElementById('mobile-menu')?.classList.remove('hidden')
+    // document.getElementById('mobile-menu')?.classList.remove('hidden') 
     setshowMenu('show_menu')
     // const menu = document.getElementById('mobile-menu')
     // menu?.classList.remove("hide_menu")
@@ -42,7 +42,7 @@ const NavigationBar = () => {
           behavior: 'smooth'
         })
         // Close mobile menu if open
-        handleCloseMenu()
+        // handleCloseMenu()
       });
     });
   }, [])
