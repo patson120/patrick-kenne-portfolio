@@ -5,15 +5,13 @@ import LocalSwitcher from './LocalSwitcher'
 
 const NavigationBar = () => {
   const t = useTranslations('navbar')
-
   const [showMenu, setshowMenu] = useState(false)
-
   const handleToggleMenu = () => {
     setshowMenu(prev => !prev)
     document.getElementById('mobile-menu')?.classList.toggle('hidden')
   }
 
-  globalThis?.window?.addEventListener("resize", (event: Event) => {
+  globalThis?.window?.addEventListener("resize", () => {
     if (window.innerWidth > 1024) {
       setshowMenu(false)
       document.getElementById('mobile-menu')?.classList.add('hidden')
