@@ -7,7 +7,8 @@ const NavigationBar = () => {
   const [showMenu, setshowMenu] = useState('')
 
   const handleOpenMenu = () => {
-    setshowMenu('show_menu')  
+    document.getElementById('mobile-menu')?.classList.remove('hidden')
+    setshowMenu('show_menu')
     // const menu = document.getElementById('mobile-menu')
     // menu?.classList.remove("hide_menu")
     // menu?.classList.add("show_menu")
