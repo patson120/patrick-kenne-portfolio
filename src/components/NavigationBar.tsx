@@ -11,6 +11,8 @@ const NavigationBar = () => {
     const menu = document.getElementById('mobile-menu')
     menu?.classList.remove("hide_menu")
     menu?.classList.add("show_menu")
+    console.log(menu?.classList);
+    
   }
 
   const handleCloseMenu = () => {
