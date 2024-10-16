@@ -2,6 +2,29 @@
 import React from 'react'
 
 const NavigationBar = () => {
+
+   // useEffect(() => {
+  //   document.addEventListener('DOMContentLoaded', function () {
+  //     const mobileMenuButton = document.getElementById('mobile-menu-button');
+  //     const mobileMenu = document.getElementById('mobile-menu');
+
+  //     mobileMenuButton!.addEventListener('click', function () {
+  //       mobileMenu!.classList.toggle('hidden');
+  //     });
+
+  //     // Smooth scrolling for anchor links
+  //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //       anchor.addEventListener('click', function (e) {
+  //         e.preventDefault();
+  //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+  //           behavior: 'smooth'
+  //         });
+  //         // Close mobile menu if open
+  //         mobileMenu!.classList.add('hidden');
+  //       });
+  //     });
+  //   });
+  // }, [])
   return (
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">

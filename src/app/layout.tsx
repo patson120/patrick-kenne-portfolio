@@ -1,12 +1,12 @@
 
 
 import localFont from "next/font/local"
-import "../styles/globals.css"
+import "@/styles/globals.css"
 import { FC } from "react"
 import { getLocale, getMessages } from "next-intl/server"
 import { NextIntlClientProvider } from "next-intl"
-import NavigationBar from "../components/NavigationBar"
-import Footer from "../components/Footer"
+import NavigationBar from "@/components/NavigationBar"
+import Footer from "@/components/Footer"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,28 +36,7 @@ const RootLayout: FC<Props> = async ({ children }) => {
   // side is the easiest way to get started
   const messages = await getMessages()
 
-  // useEffect(() => {
-  //   document.addEventListener('DOMContentLoaded', function () {
-  //     const mobileMenuButton = document.getElementById('mobile-menu-button');
-  //     const mobileMenu = document.getElementById('mobile-menu');
-
-  //     mobileMenuButton!.addEventListener('click', function () {
-  //       mobileMenu!.classList.toggle('hidden');
-  //     });
-
-  //     // Smooth scrolling for anchor links
-  //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  //       anchor.addEventListener('click', function (e) {
-  //         e.preventDefault();
-  //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-  //           behavior: 'smooth'
-  //         });
-  //         // Close mobile menu if open
-  //         mobileMenu!.classList.add('hidden');
-  //       });
-  //     });
-  //   });
-  // }, [])
+ 
 
   return (
     <html lang={locale}>
