@@ -20,6 +20,8 @@ const About = () => {
 
     const handleSubmit = () => {
         setIsloading(true)
+        console.log(isloading);
+        
         fetch(`${constants.BASE_URL}/contacts`,
             {
                 method: 'POST',

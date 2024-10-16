@@ -56,7 +56,7 @@ const useSendMail = () => {
         }
     }
 
-    return { send }
+    return { send, sendReponse }
 }
 
 export default useSendMail
