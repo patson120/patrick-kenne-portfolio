@@ -3,7 +3,7 @@
 import { useLocale } from 'next-intl';
 
 const LocalSwitcher = () => {
-    var localActive = useLocale();
+    const localActive = useLocale();
 
     const onSelectChange = (lang: string) => {
         if (localActive === lang) return
