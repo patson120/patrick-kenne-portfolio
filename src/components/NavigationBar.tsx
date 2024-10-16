@@ -1,30 +1,28 @@
+'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const NavigationBar = () => {
 
-   // useEffect(() => {
-  //   document.addEventListener('DOMContentLoaded', function () {
-  //     const mobileMenuButton = document.getElementById('mobile-menu-button');
-  //     const mobileMenu = document.getElementById('mobile-menu');
+  useEffect(() => {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      mobileMenuButton!.addEventListener('click', function () {handleToggleMenu()})
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          document.querySelector(anchor.getAttribute('href')!)!.scrollIntoView({
+            behavior: 'smooth'
+          })
+          // Close mobile menu if open
+          handleToggleMenu()
+        });
+      });
+  }, [])
 
-  //     mobileMenuButton!.addEventListener('click', function () {
-  //       mobileMenu!.classList.toggle('hidden');
-  //     });
+  const handleToggleMenu = () => document.getElementById('mobile-menu')!.classList.toggle('hidden')
 
-  //     // Smooth scrolling for anchor links
-  //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  //       anchor.addEventListener('click', function (e) {
-  //         e.preventDefault();
-  //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-  //           behavior: 'smooth'
-  //         });
-  //         // Close mobile menu if open
-  //         mobileMenu!.classList.add('hidden');
-  //       });
-  //     });
-  //   });
-  // }, [])
   return (
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -35,7 +33,7 @@ const NavigationBar = () => {
           <li><a href="#skills" className="hover:text-primary transition-colors">Skills</a></li>
           <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
         </ul>
-        <button id="mobile-menu-button" className="md:hidden text-gray-600 hover:text-primary">
+        <button onClick={handleToggleMenu} id="mobile-menu-button" className="md:hidden text-gray-600 hover:text-primary">
           <i className="fas fa-bars text-2xl"></i>
         </button>
       </nav>
