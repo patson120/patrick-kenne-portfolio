@@ -4,22 +4,22 @@ import { useEffect, useState } from 'react'
 
 const NavigationBar = () => {
 
-  const [showMenu, setshowMenu] = useState(false)
+  const [showMenu, setshowMenu] = useState('')
 
   const handleOpenMenu = () => {
-    setshowMenu(prev => !prev)  
-    const menu = document.getElementById('mobile-menu')
-    menu?.classList.remove("hide_menu")
-    menu?.classList.add("show_menu")
-    console.log(menu?.classList);
+    setshowMenu('show_menu')  
+    // const menu = document.getElementById('mobile-menu')
+    // menu?.classList.remove("hide_menu")
+    // menu?.classList.add("show_menu")
+    console.log(document.getElementById('mobile-menu')?.classList);
     
   }
 
   const handleCloseMenu = () => {
-    setshowMenu(prev => !prev)
-    const menu = document.getElementById('mobile-menu')!
-    menu?.classList.remove("show_menu")
-    menu?.classList.add("hide_menu")
+    setshowMenu('hide_menu')
+    // const menu = document.getElementById('mobile-menu')!
+    // menu?.classList.remove("show_menu")
+    // menu?.classList.add("hide_menu")
   }
 
   globalThis?.window?.addEventListener("resize", () => {
@@ -56,14 +56,14 @@ const NavigationBar = () => {
           <li><a href="#skills" className="hover:text-primary transition-colors">Skills</a></li>
           <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
         </ul>
-       { (!showMenu) ? <button onClick={handleOpenMenu} id="mobile-menu-button" className="md:hidden text-gray-600 hover:text-primary">
+       { (showMenu === 'hide_menu') ? <button onClick={handleOpenMenu} id="mobile-menu-button" className="md:hidden text-gray-600 hover:text-primary">
           <i className="fas fa-bars text-2xl"></i>
         </button> : 
         <button onClick={handleCloseMenu} id="mobile-menu-button" className="md:hidden text-gray-600 hover:text-primary">
           <i className="fas fa-close text-2xl"></i>
         </button>}
       </nav>
-      <div id="mobile-menu" className="hide_menu md:hidden bg-white pb-4">
+      <div id="mobile-menu" className={`${ showMenu === 'hide_menu' ? 'hidden': null} md:hidden bg-white pb-4`}>
         <ul className="flex flex-col items-center space-y-4">
           <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
           <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
