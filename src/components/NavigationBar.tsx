@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const NavigationBar = () => {
 
-  let [showMenu, setshowMenu] = useState(false)
+  const [showMenu, setshowMenu] = useState(false)
 
   const handleOpenMenu = () => {
     setshowMenu(prev => !prev)  
