@@ -4,24 +4,47 @@ import React, { useEffect } from 'react'
 
 const NavigationBar = () => {
 
+  // const openMenu = (event: MouseEvent<HTMLButtonElement>) => {
+  //   var menu = document.querySelector("#mobile-menu")
+  //   menu?.classList.remove("hide_menu")
+  //   menu?.classList.add("show_menu")
+  // }
+
+  // const closeMenu = () => {
+  //   var menu = document.querySelector("#mobile-menu")
+  //   menu?.classList.remove("show_menu")
+  //   menu?.classList.add("hide_menu")
+  // }
+
+  // globalThis?.window?.addEventListener("resize", (event: Event) => {
+  //   if (window.innerWidth > 1024) {
+  //     closeMenu()
+  //   }
+  // })
+
   useEffect(() => {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      mobileMenuButton!.addEventListener('click', function () {handleToggleMenu()})
-      
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault()
-          document.querySelector(anchor.getAttribute('href')!)!.scrollIntoView({
-            behavior: 'smooth'
-          })
-          // Close mobile menu if open
-          handleToggleMenu()
-        });
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    console.log("mobileMenuButton", mobileMenuButton!);
+    
+    mobileMenuButton!.addEventListener('click', function () { handleToggleMenu() })
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        document.querySelector(anchor.getAttribute('href')!)!.scrollIntoView({
+          behavior: 'smooth'
+        })
+        // Close mobile menu if open
+        handleToggleMenu()
       });
+    });
   }, [])
 
-  const handleToggleMenu = () => document.getElementById('mobile-menu')!.classList.toggle('hidden')
+  const handleToggleMenu = () => {
+    console.log("Toggle menu...")
+    document.getElementById('mobile-menu')!.classList.toggle('hidden')
+  }
 
   return (
     <header className="bg-white shadow-md">

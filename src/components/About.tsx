@@ -6,9 +6,9 @@ const About = () => {
     return (
         <section id="about" className="mb-16">
             <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/3 mb-8 md:mb-0">
+                {/* <div className="md:w-1/3 mb-8 md:mb-0">
                     <img src="./assets/img/profil.jpg" alt="Kenne Tchinda Patrick" className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg" />
-                </div>
+                </div> */}
                 <div className="md:w-2/3 md:pl-12">
                     <h2 className="text-4xl font-heading font-bold mb-4 text-secondary">A Propos</h2>
                     <p className="text-lg mb-6">Hello! Je suis
