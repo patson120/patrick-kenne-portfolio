@@ -12,7 +12,7 @@ const NavigationBar = () => {
     // const menu = document.getElementById('mobile-menu')
     // menu?.classList.remove("hide_menu")
     // menu?.classList.add("show_menu")
-    console.log(document.getElementById('mobile-menu')?.classList);
+    console.log("Open",document.getElementById('mobile-menu')?.classList);
     
   }
 
@@ -21,6 +21,7 @@ const NavigationBar = () => {
     // const menu = document.getElementById('mobile-menu')!
     // menu?.classList.remove("show_menu")
     // menu?.classList.add("hide_menu")
+    console.log("Close",document.getElementById('mobile-menu')?.classList);
   }
 
   globalThis?.window?.addEventListener("resize", () => {
@@ -64,7 +65,7 @@ const NavigationBar = () => {
           <i className="fas fa-close text-2xl"></i>
         </button>}
       </nav>
-      <div id="mobile-menu" className={`${ showMenu === 'hide_menu' ? 'hidden': null} md:hidden bg-white pb-4`}>
+      <div id="mobile-menu" className={`${ showMenu !== 'show_menu' ? null :'hidden'} md:hidden bg-white pb-4`}>
         <ul className="flex flex-col items-center space-y-4">
           <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
           <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
