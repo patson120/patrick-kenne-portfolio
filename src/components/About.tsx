@@ -12,7 +12,7 @@ const About = () => {
                 <div className="md:w-2/3 md:pl-12">
                     <h2 className="text-4xl font-heading font-bold mb-4 text-secondary">A Propos</h2>
                     <p className="text-lg mb-6">Hello! Je suis
-                        <span className='font-black'>KENNE TCHINDA Patrick </span>,
+                        <span className='font-black ml-2'>KENNE TCHINDA Patrick </span>,
                         Ingénieur Frontend passionné, autodidacte avec plus de 04 ans
                         d’expérience dans le développement de solutions Web et Mobiles.
                         Compétences avérées en analyse, UI/UX, auto-organisation,
