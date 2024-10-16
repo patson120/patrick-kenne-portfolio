@@ -15,12 +15,13 @@ const About = () => {
                 <div className="md:w-2/3 md:pl-12">
                     <h2 className="text-4xl font-heading font-bold mb-4 text-secondary">{t('title')}</h2>
                     <p className="text-lg mb-6">Hello! {t('jesuis')}
-                        <span className='font-black ml-2'>KENNE TCHINDA Patrick </span>,
+                        <span className='font-black ml-2'>KENNE TCHINDA Patrick, </span>
                         {t('description')}
                     </p>
-                    <div className="flex space-x-4">
-                        <a href="https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing" target='_blank' className="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">{t("mon_cv")}</a>
-                        <a href="#" className="bg-secondary text-white px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{t("contact")}</a>
+                    <div className="flex flex-col md:flex-row md:space-x-4">
+                        <a href="https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing" target='_blank' className="bg-primary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">{t("mon_cv")}</a>
+                        <div className='mt-3 md:hidden'></div>
+                        <a href="#" className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{t("contact")}</a>
                     </div>
                 </div>
             </div>
