@@ -7,20 +7,24 @@ const NavigationBar = () => {
   const [showMenu, setshowMenu] = useState(false)
 
   const handleOpenMenu = () => {
-    setshowMenu(prev => !prev)
-    document.getElementById('mobile-menu')!.classList.toggle("hidden")
+    setshowMenu(prev => !prev)  
+    var menu = document.getElementById('mobile-menu')
+    menu?.classList.remove("hide_menu")
+    menu?.classList.add("show_menu")
   }
 
   const handleCloseMenu = () => {
     setshowMenu(prev => !prev)
-    document.getElementById('mobile-menu')!.classList.toggle("hidden")
+    var menu = document.getElementById('mobile-menu')!
+    menu?.classList.remove("show_menu")
+    menu?.classList.add("hide_menu")
   }
 
-  // globalThis?.window?.addEventListener("resize", (event: Event) => {
-  //   if (window.innerWidth > 1024) {
-  //     closeMenu()
-  //   }
-  // })
+  globalThis?.window?.addEventListener("resize", () => {
+    if (window.innerWidth > 1024) {
+      handleCloseMenu()
+    }
+  })
 
   useEffect(() => {
     const mobileMenuButton = document.getElementById('mobile-menu-button')
@@ -39,15 +43,6 @@ const NavigationBar = () => {
     });
   }, [])
 
-  // const handleCloseMenu = () => {
-  //   setshowMenu(false)
-  //   document.getElementById('mobile-menu')!.classList.add('hidden')
-  // }
-
-  // const handleOpenMenu = () => {
-  //   setshowMenu(true)
-  //   document.getElementById('mobile-menu')!.classList.remove('hidden')
-  // }
   return (
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -66,7 +61,7 @@ const NavigationBar = () => {
           <i className="fas fa-close text-2xl"></i>
         </button>}
       </nav>
-      <div id="mobile-menu" className="hidden md:hidden bg-white pb-4">
+      <div id="mobile-menu" className="hide_menu md:hidden bg-white pb-4">
         <ul className="flex flex-col items-center space-y-4">
           <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
           <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
