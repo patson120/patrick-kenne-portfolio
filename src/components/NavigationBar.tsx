@@ -23,9 +23,7 @@ const NavigationBar = () => {
   // })
 
   useEffect(() => {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    console.log("mobileMenuButton", mobileMenuButton!);
-    
+    const mobileMenuButton = document.getElementById('mobile-menu-button')
     mobileMenuButton!.addEventListener('click', function () { handleToggleMenu() })
 
     // Smooth scrolling for anchor links
@@ -42,8 +40,9 @@ const NavigationBar = () => {
   }, [])
 
   const handleToggleMenu = () => {
-    console.log("Toggle menu...")
     document.getElementById('mobile-menu')!.classList.toggle('hidden')
+    console.log("ClassList", document.getElementById('mobile-menu')!.classList);
+    
   }
 
   return (
