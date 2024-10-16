@@ -4,18 +4,18 @@ import { useEffect, useState } from 'react'
 
 const NavigationBar = () => {
 
-  const [showMenu, setshowMenu] = useState(false)
+  let [showMenu, setshowMenu] = useState(false)
 
   const handleOpenMenu = () => {
     setshowMenu(prev => !prev)  
-    var menu = document.getElementById('mobile-menu')
+    let menu = document.getElementById('mobile-menu')
     menu?.classList.remove("hide_menu")
     menu?.classList.add("show_menu")
   }
 
   const handleCloseMenu = () => {
     setshowMenu(prev => !prev)
-    var menu = document.getElementById('mobile-menu')!
+    let menu = document.getElementById('mobile-menu')!
     menu?.classList.remove("show_menu")
     menu?.classList.add("hide_menu")
   }
@@ -27,7 +27,7 @@ const NavigationBar = () => {
   })
 
   useEffect(() => {
-    const mobileMenuButton = document.getElementById('mobile-menu-button')
+    let mobileMenuButton = document.getElementById('mobile-menu-button')
     mobileMenuButton!.addEventListener('click', function () { handleOpenMenu() })
 
     // Smooth scrolling for anchor links
