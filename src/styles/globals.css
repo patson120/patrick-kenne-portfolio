@@ -45,3 +45,14 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.show_menu {
+  @apply block;
+  /* animation: come 1s linear ease-in-out; */
+  transition: all 1s ease-in;
+}
+
+.hide_menu {
+  display: none !important;
+}

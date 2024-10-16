@@ -1,22 +1,20 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { MouseEvent, useEffect, useState } from 'react'
 
 const NavigationBar = () => {
 
   const [showMenu, setshowMenu] = useState(false)
 
-  // const openMenu = (event: MouseEvent<HTMLButtonElement>) => {
-  //   var menu = document.querySelector("#mobile-menu")
-  //   menu?.classList.remove("hide_menu")
-  //   menu?.classList.add("show_menu")
-  // }
+  const handleOpenMenu = () => {
+    setshowMenu(prev => !prev)
+    document.getElementById('mobile-menu')!.classList.toggle("hidden")
+  }
 
-  // const closeMenu = () => {
-  //   var menu = document.querySelector("#mobile-menu")
-  //   menu?.classList.remove("show_menu")
-  //   menu?.classList.add("hide_menu")
-  // }
+  const handleCloseMenu = () => {
+    setshowMenu(prev => !prev)
+    document.getElementById('mobile-menu')!.classList.toggle("hidden")
+  }
 
   // globalThis?.window?.addEventListener("resize", (event: Event) => {
   //   if (window.innerWidth > 1024) {
@@ -41,19 +39,20 @@ const NavigationBar = () => {
     });
   }, [])
 
-  const handleCloseMenu = () => {
-    setshowMenu(false)
-    document.getElementById('mobile-menu')!.classList.add('hidden')
-  }
+  // const handleCloseMenu = () => {
+  //   setshowMenu(false)
+  //   document.getElementById('mobile-menu')!.classList.add('hidden')
+  // }
 
-  const handleOpenMenu = () => {
-    setshowMenu(true)
-    document.getElementById('mobile-menu')!.classList.remove('hidden')
-  }
+  // const handleOpenMenu = () => {
+  //   setshowMenu(true)
+  //   document.getElementById('mobile-menu')!.classList.remove('hidden')
+  // }
   return (
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 className="text-2xl font-heading font-bold text-primary">Patrick KENNE</h1>
+        {/* <h1 className="text-2xl font-heading font-bold text-primary">Patrick KENNE</h1> */}
+        <span></span>
         <ul className="hidden md:flex space-x-6">
           <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
           <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
