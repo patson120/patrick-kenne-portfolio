@@ -1,13 +1,24 @@
 'use client'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
+import LocalSwitcher from './LocalSwitcher'
 
 const NavigationBar = () => {
+  const t = useTranslations('navbar')
+
   const [showMenu, setshowMenu] = useState(false)
 
   const handleToggleMenu = () => {
     setshowMenu(prev => !prev)
     document.getElementById('mobile-menu')?.classList.toggle('hidden')
   }
+
+  globalThis?.window?.addEventListener("resize", (event: Event) => {
+    if (window.innerWidth > 1024) {
+      setshowMenu(false)
+      document.getElementById('mobile-menu')?.classList.add('hidden')
+    }
+  })
 
   useEffect(() => {
     // Smooth scrolling for anchor links
@@ -29,11 +40,12 @@ const NavigationBar = () => {
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
         <h1 className="text-2xl font-heading font-bold text-primary">Patrick KENNE</h1>
         {/* <span></span> */}
-        <ul className="hidden md:flex space-x-6 transition-all">
-          <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-          <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
-          <li><a href="#skills" className="hover:text-primary transition-colors">Skills</a></li>
-          <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
+        <ul className="hidden md:flex flex-row justify-center items-center space-x-6 transition-all">
+          <li><a href="#about" className="hover:text-primary transition-colors">{t('apropos')}</a></li>
+          <li><a href="#experience" className="hover:text-primary transition-colors">{t('experience')}</a></li>
+          <li><a href="#skills" className="hover:text-primary transition-colors">{t('competences')}</a></li>
+          <li><a href="#projects" className="hover:text-primary transition-colors">{t('projets')}</a></li>
+          <li><LocalSwitcher /></li>
         </ul>
         <button onClick={handleToggleMenu} className="md:hidden text-gray-600 hover:text-primary">
           <i className={`fas ${showMenu ? 'fa-close' : 'fa-bars'} text-2xl transition-all`}></i>
@@ -41,10 +53,11 @@ const NavigationBar = () => {
       </nav>
       <div id="mobile-menu" className="hidden md:hidden bg-white pb-4 transition-all">
         <ul className="flex flex-col items-center space-y-4">
-          <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-          <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
-          <li><a href="#skills" className="hover:text-primary transition-colors">Skills</a></li>
-          <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
+          <li><a href="#about" className="hover:text-primary transition-colors">{t('apropos')}</a></li>
+          <li><a href="#experience" className="hover:text-primary transition-colors">{t('experience')}</a></li>
+          <li><a href="#skills" className="hover:text-primary transition-colors">{t('competences')}</a></li>
+          <li><a href="#projects" className="hover:text-primary transition-colors">{t('projets')}</a></li>
+          <li><LocalSwitcher /></li>
         </ul>
       </div>
     </header>

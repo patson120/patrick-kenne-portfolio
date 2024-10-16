@@ -48,7 +48,6 @@ const RootLayout: FC<Props> = async ({ children }) => {
         <NextIntlClientProvider messages={messages}>
           <main className='main relative'>
             <NavigationBar />
-            <div className='h-[80px]'></div>
             {children}
             <Footer />
           </main>

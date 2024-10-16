@@ -1,8 +1,18 @@
 {
-    "Navbar": {
-        "accueil": "ACCUEIL"
+    "navbar": {
+        "apropos": "A propos",
+        "experience": "Experience",
+        "competences": "Compétences",
+        "projets": "Projets"
     },
-    "Home": {},
-    "Contact": {},
-    "Footer": {}
+    "about": {
+        "title": "A propos",
+        "jesuis": "Je suis",
+        "description": "Ingénieur Frontend passionné, autodidacte avec plus de 04 ans d’expérience dans le développement de solutions Web et Mobiles. Compétences avérées en analyse, UI/UX, auto-organisation, production rapide et maintenabilité. Apte à transformer les besoins des clients en solutions commerciales efficaces et à planifier les activités pour fournir des livrables dans les délais. Capable de maintenir un environnement convivial et productif au sein des équipes et dans les interactions avec les clients et les managers supérieurs. Excellentes aptitudes à la présentation orale et à l’explication de problèmes complexes en termes accessibles.",
+        "mon_cv": "Télécharger mon CV",
+        "contact": "Me contacter "
+    },
+    "footer": {
+        "droits_reserves": "Tous droits reservés"
+    }
 }
