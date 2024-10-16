@@ -1,6 +1,6 @@
 'use client'
 
-import React, { MouseEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const NavigationBar = () => {
 
