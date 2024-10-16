@@ -8,14 +8,14 @@ const NavigationBar = () => {
 
   const handleOpenMenu = () => {
     setshowMenu(prev => !prev)  
-    let menu = document.getElementById('mobile-menu')
+    const menu = document.getElementById('mobile-menu')
     menu?.classList.remove("hide_menu")
     menu?.classList.add("show_menu")
   }
 
   const handleCloseMenu = () => {
     setshowMenu(prev => !prev)
-    let menu = document.getElementById('mobile-menu')!
+    const menu = document.getElementById('mobile-menu')!
     menu?.classList.remove("show_menu")
     menu?.classList.add("hide_menu")
   }
@@ -27,7 +27,7 @@ const NavigationBar = () => {
   })
 
   useEffect(() => {
-    let mobileMenuButton = document.getElementById('mobile-menu-button')
+    const mobileMenuButton = document.getElementById('mobile-menu-button')
     mobileMenuButton!.addEventListener('click', function () { handleOpenMenu() })
 
     // Smooth scrolling for anchor links
