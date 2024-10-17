@@ -12,7 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
 
-        primary: '#3498db',
+        primary: '#3165ce', // '#ffaf3f', '#3498db',
         secondary: '#2c3e50',
       },
       fontFamily: {
