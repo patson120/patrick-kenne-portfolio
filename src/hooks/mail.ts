@@ -40,7 +40,7 @@ import nodemailer from 'nodemailer'
                     <html lang='en'>
                         <body>
                             <main>
-                                <h1 style="font-weight: bold">Mr./Mme ${username},</h1> <br/>
+                                <p style="font-weight: bold">Mr./Mme ${username},</p> 
                                 <p>Nous accusons réception de votre message!</p>
                                 <p>Nous vous reviendrons bientôt pour plus d'informations. <br/> Merci de votre confiance !</p>
                             </main>
