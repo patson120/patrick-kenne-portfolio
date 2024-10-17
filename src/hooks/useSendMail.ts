@@ -7,14 +7,14 @@ const useSendMail = () => {
         try {
             await transporter.sendMail({
                 from: from,
-                to: 'patrick1kenne@gmail.com', // CONSTANTS.EMAIL_USERNAME,
+                to: 'patrickkennenl@gmail.com', // CONSTANTS.EMAIL_USERNAME,
                 subject: subject,
                 text: message,
                 html: `
                     <html lang='en'>
                         <body>
                             <main>
-                                <h1 style="font-weight: bold">Behati</h1> <br/>
+                                <h1 style="font-weight: bold">Portfolio</h1> <br/>
                                 <p style="font-weight: bold">Mr./Mme ${username} text to you.</p>
                                 <p>${message} </p>
                             </main>
@@ -23,8 +23,7 @@ const useSendMail = () => {
                 `
             })
             return true  // await sendReponse(`${CONSTANTS.EMAIL_USERNAME}`, from, "Accusé de réception", message, username)
-        } catch (error) {
-            console.log(error)            
+        } catch (error) {           
             return false
         }
     }
@@ -64,7 +63,7 @@ export default useSendMail
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: CONSTANTS.EMAIL_USERNAME,
-        pass: CONSTANTS.EMAIL_PASSWORD
+        user: 'patrickkennenl@gmail.com', // CONSTANTS.EMAIL_USERNAME,
+        pass: 'qfgrswxpxsrmkmjy', // CONSTANTS.EMAIL_PASSWORD
     }
 })

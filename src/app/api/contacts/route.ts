@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         `${body.nom} ${body.prenom}`,
     )
     if (status === true) {
-        return NextResponse.json({ success: true, status: STATUS.CREATED, result: null }, { status: STATUS.CREATED })
+        return NextResponse.json({ success: true, status: STATUS.CREATED, result: body }, { status: STATUS.CREATED })
     }
     return NextResponse.json({ success: false, status: STATUS.BAD_REQUEST, result: null }, { status: STATUS.BAD_REQUEST })
 }

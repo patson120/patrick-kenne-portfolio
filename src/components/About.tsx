@@ -15,7 +15,7 @@ const About = () => {
         prenom: "Patrick",
         email: "patrick1kenne@gmail.com",
         object: "Prise de contact",
-        message: "Je souhaite quelques minutes de discussion avec vous. Merci de me laisser un message.",
+        message: "Je souhaite avoir quelques minutes d'échange avec vous. Merci de me laisser un message.",
     })
 
     const handleSubmit = () => {
@@ -25,9 +25,7 @@ const About = () => {
         fetch(`${constants.BASE_URL}/contacts`,
             {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: {'Content-Type': 'application/json',},
                 body: JSON.stringify(contact)
             }
         )
