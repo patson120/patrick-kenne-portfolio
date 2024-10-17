@@ -13,7 +13,13 @@
         "contact": "Me contacter "
     },
     "experiences": {
-        "title": "Expériences"
+        "title": "Expérience Professionnelle"
+    },
+    "competences": {
+        "title": "Compétences & expertise"
+    },
+    "projets": {
+        "title": "Projets en vedette"
     },
     "footer": {
         "droits_reserves": "Tous droits reservés"

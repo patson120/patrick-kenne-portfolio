@@ -12,6 +12,15 @@
         "mon_cv": "Download CV",
         "contact": "Contact Me"
     },
+    "experiences": {
+        "title": "Professional Experience"
+    },
+    "competences": {
+        "title": "Skills & Expertise"
+    },
+    "projets": {
+        "title": "Featured Projects"
+    },
     "footer": {
         "droits_reserves": "All rights reserved"
     }

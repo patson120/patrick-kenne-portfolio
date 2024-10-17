@@ -1,10 +1,12 @@
 
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 const Projects = () => {
+    const t = useTranslations('projets')
     return (
         <section id="projects" className="mb-16">
-            <h2 className="text-3xl font-heading font-bold mb-8 text-secondary">Featured Projects</h2>
+            <h2 className="text-3xl font-heading font-bold mb-8 text-secondary">{t('title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://alvarotrigo.com/blog/assets/imgs/2021-10-16/dvlpr-front-end-portfolio-example.jpeg" alt="E-commerce Platform" className="w-full h-48 object-cover" />
