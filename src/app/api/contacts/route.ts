@@ -29,9 +29,8 @@ export function POST(request: Request) {
         //         return NextResponse.json({ success: false, status: STATUS.BAD_REQUEST, result: null }, { status: STATUS.BAD_REQUEST })
         //     })
         // })
-    } catch (error: any) {
-        console.log(error);
-        return NextResponse.json({ success: false, status: STATUS.BAD_REQUEST, result: error.message }, { status: STATUS.BAD_REQUEST })
+    } catch (error) {
+        return NextResponse.json({ success: false, status: STATUS.BAD_REQUEST, result: error }, { status: STATUS.BAD_REQUEST })
 
     }
 
