@@ -14,7 +14,7 @@ import nodemailer from 'nodemailer'
                         <body>
                             <main>
                                 <h1 style="font-weight: bold">Portfolio</h1> <br/>
-                                <p style="font-weight: bold">Mr./Mme ${username} text to you.</p>
+                                <p style="font-weight: bold">Mr./Mme ${username} vous a laissé les message ci-dessous.</p>
                                 <p>${message} </p><br/>
                                 <p>Sender email: ${from}</p>
                             </main>
@@ -22,7 +22,7 @@ import nodemailer from 'nodemailer'
                     </html>
                 `
             })
-            return true  // await sendReponse(`${CONSTANTS.EMAIL_USERNAME}`, from, "Accusé de réception", message, username)
+            return await sendReponse(`${CONSTANTS.EMAIL_USERNAME}`, from, "Accusé de réception", message, username)
         } catch (error) { 
             console.log(error)                      
             return false
@@ -40,8 +40,7 @@ import nodemailer from 'nodemailer'
                     <html lang='en'>
                         <body>
                             <main>
-                                <h1 style="font-weight: bold">Patrick KENNE,</h1> <br/>
-                                <p style="font-weight: bold">Mr./Mme ${username}, </p>
+                                <h1 style="font-weight: bold">Mr./Mme ${username},</h1> <br/>
                                 <p>Nous accusons réception de votre message!</p>
                                 <p>Nous vous reviendrons bientôt pour plus d'informations. <br/> Merci de votre confiance !</p>
                             </main>
@@ -51,7 +50,7 @@ import nodemailer from 'nodemailer'
             })
             return true
         } catch (error) {
-            console.log(2, error);
+            console.log(error);
             return false
         }
     }

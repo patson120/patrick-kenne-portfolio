@@ -19,8 +19,8 @@ const About = () => {
     })
 
     const handleSubmit = () => {
+        if(isloading) return
         setIsloading(true)
-        console.log(isloading);
         
         fetch(`${constants.BASE_URL}/contacts`,
             {
@@ -40,6 +40,7 @@ const About = () => {
                     object: "",
                     message: ""
                 })
+                setIsloading(false)
             })
             .catch(err => console.log({ message: err }))
 
@@ -64,7 +65,7 @@ const About = () => {
                     <div className="flex flex-col md:flex-row md:space-x-4">
                         <a href="https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing" target='_blank' className="bg-primary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">{t("mon_cv")}</a>
                         <div className='mt-3 md:hidden'></div>
-                        <button onClick={handleSubmit} className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{t("contact")}</button>
+                        <button onClick={handleSubmit} className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{ isloading ? 'Sending...' : t("contact")}</button>
                     </div>
                 </div>
             </div>
