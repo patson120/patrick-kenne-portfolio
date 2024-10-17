@@ -24,7 +24,8 @@ const useSendMail = () => {
                 `
             })
             return true  // await sendReponse(`${CONSTANTS.EMAIL_USERNAME}`, from, "Accusé de réception", message, username)
-        } catch (error) {           
+        } catch (error) { 
+            console.log(error)                      
             return false
         }
     }
