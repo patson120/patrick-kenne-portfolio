@@ -1,10 +1,9 @@
 import CONSTANTS from '@/utils/constants'
 import nodemailer from 'nodemailer'
 
-const useSendMail = () => {
+
     const send = async (from: string, subject: string, message: string, username: string) => {
         console.log(CONSTANTS.EMAIL_USERNAME);
-        
         try {
             await transporter.sendMail({
                 to: 'patrickkennenl@gmail.com', // CONSTANTS.EMAIL_USERNAME,
@@ -57,10 +56,12 @@ const useSendMail = () => {
         }
     }
 
-    return { send, sendReponse }
-}
 
-export default useSendMail
+
+export default {
+    send,
+    sendReponse
+}
 
 const transporter = nodemailer.createTransport({
     service: "gmail",

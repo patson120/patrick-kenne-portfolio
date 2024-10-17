@@ -1,4 +1,4 @@
-import useSendMail from "@/hooks/useSendMail";
+import MAIL from "@/hooks/mail";
 import STATUS from "@/utils/status.code";
 import { NextResponse } from "next/server";
 
@@ -6,8 +6,7 @@ import { NextResponse } from "next/server";
 // Handles POST requests to /api/contacts
 export function POST(request: Request) {
     const getMailStatus = async (body: any) => {
-        const hookSenMail = useSendMail()
-        return await hookSenMail.send(
+        return await MAIL.send(
             body.email,
             body.object,
             body.message,
