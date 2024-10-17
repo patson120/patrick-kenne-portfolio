@@ -10,7 +10,7 @@ const BodyContent = () => {
     <main className="container mx-auto px-4 py-12">
         {/* About */}
         <About />
-
+        <div className='md:h-10'></div>
         {/* Expériences */}
         <Experiences />
 

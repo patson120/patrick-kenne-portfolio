@@ -59,7 +59,7 @@ const About = () => {
                 </div>
                 <div className="md:w-2/3 md:pl-12">
                     <h2 className="text-4xl font-heading font-bold mb-4 text-secondary">{t('title')}</h2>
-                    <p className="text-lg mb-6">Hello! {t('jesuis')}
+                    <p className="text-lg mb-6 md:text-left text-justify">Hello! {t('jesuis')}
                         <span className='font-black ml-2'>KENNE TCHINDA Patrick, </span>
                         {t('description')}
                     </p>
@@ -68,9 +68,10 @@ const About = () => {
                         <div className='mt-3 md:hidden'></div>
                         <button onClick={handleSubmit} className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{isloading ? 'Sending...' : t("contact")}</button>
                     </div>
+                    {/* Social Media */}
+                    <SocialMedia containerStyle='md:mt-10 md:space-x-8' />
                 </div>
-                {/* Social Media */}
-                <SocialMedia />
+
             </div>
         </section>
     )
