@@ -12,6 +12,9 @@
         "mon_cv": "Télécharger mon CV",
         "contact": "Me contacter "
     },
+    "experiences": {
+        "title": "Expériences"
+    },
     "footer": {
         "droits_reserves": "Tous droits reservés"
     }
