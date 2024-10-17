@@ -36,7 +36,7 @@ const NavigationBar = () => {
   return (
     <header className="bg-white flex-1 flex-col fixed top-0 left-0 right-0 z-[99999] shadow-lg">
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 className="text-2xl font-heading font-bold text-primary">Patrick KENNE</h1>
+        <h1 className="text-lg md:text-2xl font-heading font-bold text-primary">Patrick KENNE</h1>
         {/* <span></span> */}
         <ul className="hidden md:flex flex-row justify-center items-center space-x-6 transition-all">
           <li><a href="#about" className="hover:text-primary transition-colors">{t('apropos')}</a></li>
