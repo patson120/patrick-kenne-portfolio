@@ -1,7 +1,5 @@
+import STATUS from "@/utils/status.code";
 import { NextResponse } from "next/server";
-import STATUS from "@/utils/status.code"
-import useSendMail from "@/hooks/useSendMail";
-import { log } from "console";
 
 
 // Handles POST requests to /api/contacts
@@ -19,6 +17,8 @@ export function POST(request: Request) {
     //     )
     // }
     try {
+        console.log(request.json());
+        
         return NextResponse.json({ success: true, status: STATUS.CREATED, result: null }, { status: STATUS.CREATED })
         // getBody().then(body => {
         //     getMailStatus(body).then(status => {
