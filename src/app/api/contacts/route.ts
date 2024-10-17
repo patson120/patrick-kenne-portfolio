@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 
 // Handles POST requests to /api/contacts
 export function POST(request: Request) {
-    const getMailStatus = async (body: {[key:string]: any}) => {
+    const getMailStatus = async (body: {[key:string]: string}) => {
         return await MAIL.send(
             body.email,
             body.object,
