@@ -3,10 +3,10 @@ import nodemailer from 'nodemailer'
 
 const useSendMail = () => {
     const send = async (from: string, subject: string, message: string, username: string) => {
+        console.log(CONSTANTS.EMAIL_USERNAME);
         
         try {
             await transporter.sendMail({
-                from: from,
                 to: 'patrickkennenl@gmail.com', // CONSTANTS.EMAIL_USERNAME,
                 subject: subject,
                 text: message,
@@ -16,7 +16,8 @@ const useSendMail = () => {
                             <main>
                                 <h1 style="font-weight: bold">Portfolio</h1> <br/>
                                 <p style="font-weight: bold">Mr./Mme ${username} text to you.</p>
-                                <p>${message} </p>
+                                <p>${message} </p><br/>
+                                <p>Sender email: ${from}</p>
                             </main>
                         </body>
                     </html>
