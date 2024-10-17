@@ -69,7 +69,7 @@ const About = () => {
                         <button onClick={handleSubmit} className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{isloading ? 'Sending...' : t("contact")}</button>
                     </div>
                     {/* Social Media */}
-                    <SocialMedia containerStyle='md:mt-10 md:space-x-8' />
+                    <SocialMedia containerStyle='mt-6 md:mt-10 space-x-8 flex-row justify-center md:justify-start' />
                 </div>
 
             </div>
