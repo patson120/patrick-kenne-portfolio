@@ -59,7 +59,7 @@ const experiences_fr: Experience[] = [
         title: 'Développeur Senior Frontend',
         company: 'AfrikPay',
         location: 'Douala, Cameroun',
-        startDate: 'Avr 2022',
+        startDate: 'Avr 2024',
         endDate: 'Présent',
         description: '',
         tasks: [
