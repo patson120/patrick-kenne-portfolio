@@ -61,6 +61,7 @@ const About = () => {
                             alt="Kenne Tchinda Patrick Profil"
                             src="/assets/img/profil.jpg"
                             fill
+                            sizes='200px'
                             style={{
                                 objectFit: "cover"
                             }}
