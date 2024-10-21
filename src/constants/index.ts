@@ -78,15 +78,15 @@ const experiences_en: Experience[] = [
                 description: 'Good knowledge of frontend technologies (React, React Native, Angular, Vue.js, Flutter) and backend technologies (NodeJs, ExpressJs, Python, Django, Java, Spring Boots).'
             },
             {
-                id: '7',
+                id: '8',
                 description: 'Solid experience in managing relational and non-relational databases (SQL, NoSQL).'
             },
             {
-                id: '8',
+                id: '9',
                 description: 'Integration of end-to-end testing solutions with Jest, Cypress and Selenium.'
             },
             {
-                id: '9',
+                id: '10',
                 description: 'Drafting of solution documentation'
             },
         ]
@@ -242,15 +242,15 @@ const experiences_fr: Experience[] = [
                 description: 'Bonnes connaissances des technologies Frontend (React, React Native, Angular, Vue.js, Flutter) et Backend (NodeJs, ExpressJs, Python, Django, Java, Spring Boots).'
             },
             {
-                id: '7',
+                id: '8',
                 description: 'Expérience solide dans la gestion des Bases de Données relationnelles et non relationnelle (SQL, NoSQL).'
             },
             {
-                id: '8',
+                id: '9',
                 description: 'Intégration des tests de bout en bout des solutions avec Jest, Cypress et Selenium.'
             },
             {
-                id: '9',
+                id: '10',
                 description: 'Rédaction des documentations des solutions'
             },
         ]
