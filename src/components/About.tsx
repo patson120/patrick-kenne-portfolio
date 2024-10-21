@@ -5,6 +5,7 @@ import constants from '@/utils/constants'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import SocialMedia from './SocialMedia'
+import Image from 'next/image'
 
 const About = () => {
     const t = useTranslations("about")
@@ -55,7 +56,16 @@ const About = () => {
             <div className='h-[80px]'></div>
             <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/3 mb-8 md:mb-0">
-                    <img src="./assets/img/profil.jpg" alt="Kenne Tchinda Patrick" className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg" />
+                    <div className="relative rounded-full overflow-hidden w-64 h-64 object-cover mx-auto shadow-lg">
+                        <Image
+                            alt="Kenne Tchinda Patrick Profil"
+                            src="/assets/img/profil.jpg"
+                            fill
+                            style={{
+                                objectFit: "cover"
+                            }}
+                        />
+                    </div>
                 </div>
                 <div className="md:w-2/3 md:pl-12">
                     <h2 className="text-4xl font-heading font-bold mb-4 text-secondary">{t('title')}</h2>
