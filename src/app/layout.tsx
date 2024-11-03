@@ -46,7 +46,7 @@ const RootLayout: FC<Props> = async ({ children }) => {
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 font-roboto text-gray-800`}>
         <NextIntlClientProvider messages={messages}>
-          <main className='main relative'>
+          <main className='relative' style={{ userSelect: 'none' }}>
             <NavigationBar />
             {children}
             <Footer />
