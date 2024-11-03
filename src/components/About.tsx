@@ -2,13 +2,18 @@
 
 import { ContactType } from '@/types'
 import constants from '@/utils/constants'
-import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { useEffect, useState } from 'react'
 import SocialMedia from './SocialMedia'
 import Image from 'next/image'
 
 const About = () => {
     const t = useTranslations("about")
+    const locale = useLocale()
+
+    const [link, setLink] = useState('')
+
+    
 
     const [isloading, setIsloading] = useState(false)
     const [contact, setContact] = useState<ContactType>({
@@ -51,6 +56,15 @@ const About = () => {
             })
     }
 
+    useEffect(() => {
+        if (locale === "en") {
+            setLink('#')
+        }
+        else {
+            setLink('https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing')
+        }
+    }, [locale])
+
     return (
         <section id="about" className="mb-16">
             <div className='h-[80px]'></div>
@@ -75,7 +89,7 @@ const About = () => {
                         {t('description')}
                     </p>
                     <div className="flex flex-col md:flex-row md:space-x-4">
-                        <a href="https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing" target='_blank' className="bg-primary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">{t("mon_cv")}</a>
+                        <a href={link} target='_blank' className="bg-primary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">{t("mon_cv")}</a>
                         <div className='mt-3 md:hidden'></div>
                         <button onClick={handleSubmit} className="bg-secondary text-white text-center md:text-left whitespace-nowrap px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">{isloading ? 'Sending...' : t("contact")}</button>
                     </div>
