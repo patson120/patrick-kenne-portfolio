@@ -58,10 +58,10 @@ const About = () => {
 
     useEffect(() => {
         if (locale === "en") {
-            setLink('#')
+            setLink('https://drive.google.com/file/d/1Z7M-oGt1qUVaLzVoCxsQXD-vFZrq5eqV/view?usp=sharing')
         }
         else {
-            setLink('https://drive.google.com/file/d/1SBoIKcKEkycDslyzND311YBbT-nws_Hc/view?usp=sharing')
+            setLink('https://drive.google.com/file/d/1ZFl2xh5oPixZmY1K8wphQdOTaDhZP5Zx/view?usp=sharing')
         }
     }, [locale])
 
